@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Videote lisamine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🔐 Admini paneel</h1>
+    <p>Lisa uus video</p>
+</header>
+
+
+<main class="admin">
+
+    <h2>Uus video</h2>
+
+    <label>
+        Video nimi:
+    </label>
+    <br>
+    <input type="text" id="title" placeholder="Video pealkiri">
+
+    <br><br>
+
+    <label>
+        Video fail:
+    </label>
+    <br>
+    <input type="file" id="videoFile" accept="video/*">
+
+    <br><br>
+
+    <label>
+        Avaldamise kuupäev ja kellaaeg:
+    </label>
+    <br>
+    <input type="datetime-local" id="date">
+
+    <br><br>
+
+    <button onclick="uploadVideo()">
+        ⬆ Lisa video
+    </button>
+
+
+    <p id="message"></p>
+
+</main>
+
+
+<script>
+
+function uploadVideo(){
+
+    let title = document.getElementById("title").value;
+    let date = document.getElementById("date").value;
+
+    if(title == "" || date == ""){
+        document.getElementById("message").innerHTML =
+        "Täida kõik väljad!";
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+    "Video lisatud! Avaldatakse: " + date;
+
+}
+
+</script>
+
+
+</body>
+</html>
