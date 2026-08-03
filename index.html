@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minu videokeskus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎬 Minu videokeskus</h1>
+    <p>Vaata minu uusimaid videoid</p>
+</header>
+
+<main>
+
+    <section class="videos">
+
+        <div class="video">
+            <img src="https://via.placeholder.com/300x170" alt="Video pilt">
+            <h2>Minu esimene video</h2>
+            <p>Video kirjeldus siia</p>
+            <button onclick="playVideo('video1.mp4')">
+                ▶ Vaata videot
+            </button>
+        </div>
+
+
+        <div class="video">
+            <img src="https://via.placeholder.com/300x170" alt="Video pilt">
+            <h2>Teine video</h2>
+            <p>Veel üks video</p>
+            <button onclick="playVideo('video2.mp4')">
+                ▶ Vaata videot
+            </button>
+        </div>
+
+    </section>
+
+
+    <div id="player">
+        <video id="videoPlayer" controls>
+            Sinu brauser ei toeta videot.
+        </video>
+    </div>
+
+
+</main>
+
+
+<footer>
+    <p>© 2026 Minu videokeskus</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
